@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DentalCare+ Клиника</title>
+  <meta name="description" content="Стоматология: терапия, гигиена, имплантация, протезирование. Онлайн-запись." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html"><span class="logo-mark">🦷</span> DentalCare<span class="plus">+</span></a>
+      <nav>
+        <ul class="nav">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="doctors.html">Врачи</a></li>
+            <li><a href="prices.html">Цены</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="appointment.html">Запись</a></li>
+            <li><a href="login.html">Вход</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+
+<section class="card">
+  <h2>Запись на приём</h2>
+  <form id="appointmentForm" class="form" action="thank-you.html" method="post" onsubmit="return handleAppointment(event)">
+    <div class="row">
+      <label>Имя
+        <input type="text" name="name" required />
+      </label>
+      <label>Телефон
+        <input type="tel" name="phone" inputmode="tel" placeholder="+7 900 000-00-00" pattern="^[+0-9\s\-()]{7,}$" required />
+      </label>
+    </div>
+    <label>Email
+      <input type="email" name="email" required />
+    </label>
+    <label>Комментарий (необязательно)
+      <textarea name="comment" rows="4" placeholder="Удобное время, жалобы и т.д."></textarea>
+    </label>
+    <div class="row">
+      <button type="submit" class="btn">Оставить заявку</button>
+    </div>
+    <p class="muted">* Демо-форма: данные сохраняются в браузере (localStorage).</p>
+  </form>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>&copy; 2025 DentalCare+ Клиника. Учебный проект без бэкенда.</p>
+    </div>
+  </footer>
+  <script src="assets/main.js"></script>
+</body>
+</html>
